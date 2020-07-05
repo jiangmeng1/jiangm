@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_topbar_title_height"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/btLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/app_topbar_height">
+
+            <ImageView
+                android:id="@+id/ivLeft"
+                android:layout_width="@dimen/app_topbar_image_height"
+                android:layout_height="@dimen/app_topbar_image_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:src="@mipmap/ep_back" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:ellipsize="middle"
+            android:gravity="center"
+            android:maxEms="8"
+            android:singleLine="true"
+            android:text="设置字体大小"
+            android:textColor="#030303"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvRight"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:clickable="true"
+            android:gravity="right|center"
+            android:text="完成"
+            android:textColor="@color/orange_text"
+            android:textSize="17sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/topbar"
+        android:background="@color/linecolor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/line"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/font_margin_xxl"
+            android:layout_marginBottom="@dimen/font_margin_xxl"
+            android:paddingLeft="@dimen/font_padding_xxl"
+            android:paddingRight="60dp">
+
+            <com.example.fontsizeset.view.ChangeWordTextView
+                android:id="@+id/message_content_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/font_margin_l"
+                android:background="@drawable/im_other_message_bg"
+                android:paddingLeft="@dimen/font_padding_xxl"
+                android:paddingTop="8dp"
+                android:paddingRight="@dimen/font_padding_xl"
+                android:paddingBottom="8dp"
+                android:text="拖动下面的滑块，可以设置界面中的字体大小"
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+
+            <com.example.fontsizeset.view.CircleImageView
+                android:id="@+id/user_avatar_other"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/system_avatar" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="60dp"
+            android:paddingRight="@dimen/font_padding_xxl">
+
+            <com.example.fontsizeset.view.CircleImageView
+                android:id="@+id/user_avatar"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/default_head" />
+
+            <com.example.fontsizeset.view.ChangeWordTextView
+                android:id="@+id/message_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="@dimen/font_margin_l"
+                android:layout_toLeftOf="@id/user_avatar"
+                android:background="@drawable/im_mine_message_bg"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="@dimen/font_padding_xl"
+                android:paddingTop="@dimen/font_padding_xl"
+                android:paddingRight="@dimen/font_padding_xxl"
+                android:paddingBottom="@dimen/font_padding_xl"
+                android:text="设置字体大小"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_font_xm" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp">
+
+            <TextView
+                android:id="@+id/text_mid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="中"
+                android:textColor="#969696"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_standard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="30dp"
+                android:text="标准"
+                android:textColor="#2c2c2c"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text_big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="37dp"
+                android:gravity="right"
+                android:text="大"
+                android:textColor="#969696"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="30dp">
+
+            <com.example.fontsizeset.view.SetTextSizeView
+                android:id="@+id/set_text_font"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                app:circleColor="@color/color_primary"
+                app:circleRadius="16dp"
+                app:lineColor="@color/color_accent"
+                app:lineWidth="1dp"
+                app:totalCount="2" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

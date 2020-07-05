@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    //-----------------规范尺寸-----------------//
+    <dimen name="font_margin_l">4dp</dimen>
+    <dimen name="font_margin_xl">8dp</dimen>
+    <dimen name="font_margin_xxl">12dp</dimen>
+
+    <dimen name="font_padding_xxl">12dp</dimen>
+    <dimen name="font_padding_xl">8dp</dimen>
+    <dimen name="font_font_xm">16sp</dimen>
+    <dimen name="app_topbar_height">42dp</dimen>
+    <dimen name="app_topbar_image_height">21dp</dimen>
+    <dimen name="app_topbar_title_height">46dp</dimen>
+</resources>
